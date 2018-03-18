@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+
+  tasks:
+    - rds:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        region: '{{region}}'
+        command: snapshot
+        snapshot: '{{snapshotname}}'
+        instance_name: '{{databaseinstancename}}'

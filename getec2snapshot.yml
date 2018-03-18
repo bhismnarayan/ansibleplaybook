@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+
+  tasks:
+    - ec2_snapshot_facts:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        owner_ids: '{{owner}}'
+        region: '{{region}}'
+      register: snapshot
+    - debug: var=snapshot

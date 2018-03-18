@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+
+  tasks:
+    - ec2_instance_facts:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        region: '{{region}}'
+      register: '{{ec2facts}}'
+    - debug: var='{{ec2facts}}'

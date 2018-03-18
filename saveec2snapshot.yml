@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+
+  tasks:
+    - ec2_snapshot:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        region: '{{region}}'
+        volume_id: '{{volume-id}}'
+        snapshot_tags:
+          frequency: hourly
+          source: /data
+      register: snapshot
+    - debug: var=snapshot

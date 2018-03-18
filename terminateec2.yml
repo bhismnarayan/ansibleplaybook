@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+
+  tasks:
+    - ec2:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        region: '{{region}}'
+        instance_ids: '{{instanceid}}'
+        instance_tags:
+          Name: '{{name}}'
+        state: absent
