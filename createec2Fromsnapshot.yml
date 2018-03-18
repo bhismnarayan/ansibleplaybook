@@ -10,7 +10,7 @@
         image: '{{image}}'
         wait: yes
         wait_timeout: 500
-        count: 5
+        count: 1
         instance_tags:
           Name: '{{instance_Name}}'
         volumes:
