@@ -6,7 +6,7 @@
         aws_access_key: '{{aws_access_key}}'
         aws_secret_key: '{{aws_secret_key}}'
         region: '{{region}}'
-        volume_id: '{{volume-id}}'
+        volume_id: '{{volumeid}}'
         snapshot_tags:
           frequency: hourly
           source: /data
