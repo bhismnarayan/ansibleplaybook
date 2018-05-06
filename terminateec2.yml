@@ -6,7 +6,5 @@
         aws_access_key: '{{aws_access_key}}'
         aws_secret_key: '{{aws_secret_key}}'
         region: '{{region}}'
-        instance_ids: '{{instanceid}}'
-        instance_tags:
-          Name: '{{name}}'
+        instance_ids: '{{instanceid}}'        
         state: absent
