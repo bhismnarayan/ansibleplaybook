@@ -11,8 +11,7 @@
         wait: yes
         wait_timeout: 500
         count: 1
-        instance_tags:
-          Name: '{{instance_Name}}'
+        instance_id: '{{instance_id}}'
         volumes:
         - device_name: '{{device_name}}'
           snapshot: '{{snapshotid}}'
