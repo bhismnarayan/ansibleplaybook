@@ -8,3 +8,4 @@
         region: '{{region}}'
         instance_id: '{{instance_id}}'
         state: running
+      register: '{{instance_id}}'
