@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+
+  tasks:
+    - ec2:
+        aws_access_key: '{{aws_access_key}}'
+        aws_secret_key: '{{aws_secret_key}}'
+        region: '{{region}}'
+        key_name: '{{key_name}}'
+        instance_type: '{{instance_type}}'
+        image: '{{image}}'
+        wait: yes        
+        vpc_subnet_id: '{{vpc_subnet_id}}'
+        assign_public_ip: '{{assign_public_ip}}'
+        instance_tags:
+          name: '{{instance_name}}'
+      register: ec2
+    - debug: var=ec2
