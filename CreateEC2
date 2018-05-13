@@ -13,6 +13,6 @@
         vpc_subnet_id: '{{vpc_subnet_id}}'
         assign_public_ip: '{{assign_public_ip}}'
         instance_tags:
-          name: '{{instance_name}}'
+          Name: '{{instance_name}}'
       register: ec2
     - debug: var=ec2
